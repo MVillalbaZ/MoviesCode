@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Página de streaming de películas" />
+    <meta name="author" content="GitTeam2.0" />
+    <meta name="keywords" content="película, películas, streaming" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/image__1_-removebg-preview2.png"
+      type="image/png"
+    />
+    <title>MoviesCode</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="fixed-top">
+      <nav
+        class="navbar nav-underline bg-black navbar-expand-lg d-flex align-items-start"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <div class="mx-3">
+            <a class="navbar-footer-brand" href="../index.html">
+              <img
+                src="../assets/image__1_-removebg-preview.png"
+                alt="Logo de MoviesCode"
+              />
+            </a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+            <div id="navStartingPage" class="d-flex justify-content-center">
+              <ul
+                id="sectionStart"
+                class="row me-3 my-2 justify-content-end align-items-center"
+              >
+                <li
+                  class="d-flex col-5 justify-content-center nav-item mx-1 rounded-2 p-2 target"
+                >
+                  <a class="nav-link text-white text-target" href="./login.html"
+                    >Loguearse</a
+                  >
+                </li>
+                <li
+                  class="d-flex col-5 justify-content-center nav-item mx-1 rounded-2 bg-white border border-light p-2 target-2"
+                >
+                  <a
+                    class="nav-link text-black text-target"
+                    href="./register.html"
+                    >Registrarse</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex">
+              <button
+                class="btn btn-outline-info offcanvas sticky-top"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasSearch"
+                aria-controls="offcanvasSearch"
+                aria-label="Botón de Búsqueda"
+              >
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="col container-fluid justify-content-center align-items-center pt-5 min-vh-100"
+    >
+      <div class="row justify-content-center mt-5 mx-md-5">
+        <section class="border bg-body-secondary px-5 py-3 my-5">
+          <h1 class="text-black">Acerca de nosotros</h1>
+          <p class="text-black">
+            Bienvenido a Movies Code - Tu Destino Cinematográfico en Línea
+            Descubre el fascinante mundo del cine en una sola plataforma: Movies
+            Code. Aquí, nuestra misión es brindarte una experiencia
+            cinematográfica excepcional, donde podrás explorar una amplia
+            variedad de películas de todos los géneros, décadas y rincones del
+            mundo. Lo que ofrecemos:
+            <br />
+            <br />
+            🍿 Extensa Biblioteca Cinematográfica: Nuestra colección incluye
+            desde los éxitos más recientes de Hollywood hasta joyas del cine
+            independiente y clásicos atemporales. ¡Hay algo para todos los
+            gustos y estados de ánimo!
+            <br />
+            🎥 Streaming y Descarga: Disfruta de la flexibilidad de ver tus
+            películas favoritas en línea o descargarlas para verlas sin
+            conexión, siempre que lo desees. La elección es tuya.
+            <br />
+            📜 Información Detallada: Conoce más sobre cada película con
+            nuestras descripciones detalladas, listas de actores y equipos de
+            producción, puntuaciones de críticos y reseñas de la comunidad.
+            <br />
+            🔍 Navegación Sencilla: Encuentra fácilmente lo que buscas a través
+            de nuestro sistema de búsqueda avanzada, categorías por género, y
+            recomendaciones personalizadas basadas en tus preferencias de
+            visualización.
+            <br />
+            🌟 Funciones de Usuario: Crea tus listas de reproducción
+            personalizadas, califica y comenta películas, y comparte tus
+            opiniones con una comunidad apasionada de amantes del cine.
+            <br />
+            📱 Multiplataforma: Disfruta de Movies Code en cualquier
+            dispositivo: computadoras de escritorio, tabletas o teléfonos
+            móviles. Lleva tus películas favoritas contigo dondequiera que
+            vayas.
+            <br />
+            <br />
+            Legalidad y Respeto por los Derechos de Autor: En Movies Code,
+            operamos dentro de los límites legales y respetamos los derechos de
+            autor de todas las películas que ofrecemos. Nos esforzamos por
+            proporcionar una experiencia cinematográfica ética y responsable.
+            ¡Únete a la comunidad de cinéfilos apasionados en Movies Code y
+            comienza tu viaje cinematográfico hoy mismo! Descubre nuevas
+            películas, revive viejos clásicos y experimenta la magia del cine
+            como nunca antes. No importa si eres un amante del drama, la acción,
+            la comedia, la ciencia ficción o el romance, en Movies Code,
+            encontrarás una película que te atrapará. ¡Prepárate para disfrutar
+            de horas interminables de entretenimiento cinematográfico de alta
+            calidad! ¡Regístrate ahora y sumérgete en el mundo del cine en
+            Movies Code!
+            <br />
+            <br />
+            Atentamente,
+            <br />
+            Movies Code.
+          </p>
+        </section>
+        <section
+          class="row justify-content-center align-items-center"
+          id="tarjetas"
+        >
+          <div class="row vw-100 justify-content-center">
+            <h2 class="my-5 text-center text-white">Miembros</h2>
+            <div
+              class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-5 justify-content-center mb-5"
+            >
+              <div class="col d-flex justify-content-center">
+                <div
+                  id="card"
+                  class="card h-100 text-center border-0 people-card bg-black"
+                >
+                  <img
+                    src="/assets/WhatsApp Image 2023-06-19 at 11.11.27.jpeg"
+                    class="m-1"
+                    alt="Juan Anzorena"
+                  />
+                  <h4 class="card-title text-white">Juan Anzorena</h4>
+                  <p class="card-text">22 años</p>
+                  <p class="card-text">Egresado 2018</p>
+                </div>
+              </div>
+              <div class="col d-flex justify-content-center">
+                <div
+                  id="card"
+                  class="card h-100 text-center border-0 people-card bg-black"
+                >
+                  <img
+                    src="/assets/imagenmaxi2.jpg"
+                    class="m-1"
+                    alt="Maximo Villalba"
+                  />
+                  <h4 class="card-title text-white">Maximo Villalba</h4>
+                  <p class="card-text">18 años</p>
+                  <p class="card-text">Egresado 2022</p>
+                </div>
+              </div>
+              <div class="col d-flex justify-content-center">
+                <div
+                  id="card"
+                  class="card h-100 text-center border-0 people-card bg-black"
+                >
+                  <img
+                    src="/assets/WhatsApp Image 2023-06-13 at 20.39.34.jpeg"
+                    class="m-1"
+                    alt="Lucas Chocobar"
+                  />
+                  <h4 class="card-title text-white">Lucas Chocobar</h4>
+                  <p class="card-text">20 años</p>
+                  <p class="card-text">Egresado 2020</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="container-fluid bg-transparent">
+      <hr />
+      <div
+        class="row py-4 flex-column flex-md-row align-items-center gap-3 nav-footer-color"
+      >
+        <div class="col-12 logo-footer text-center navbar-footer-brand">
+          <img
+            src="../assets/image__1_-removebg-preview.png"
+            alt="Logo de MoviesCode"
+          />
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <a class="text-decoration-none mx-3 text-white" href="./contact.html"
+            >Contacto</a
+          >
+          <a class="text-decoration-none mx-3 text-white" href="./about.html"
+            >Acerca de</a
+          >
+        </div>
+        <div class="col-12 text-white text-center">
+          <small>&copy;MoviesCode 2023. Derechos reservados.</small>
+        </div>
+        <div
+          class="col-12 text-white text-center d-flex justify-content-center"
+        >
+          <a href="./error404.html" aria-label="Instagram"
+            ><i
+              class="fa fa-instagram fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+          <a href="./error404.html" aria-label="Youtube"
+            ><i
+              class="fa fa-youtube-play fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+          <a href="./error404.html" aria-label="Twitch"
+            ><i
+              class="fa fa-twitch fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+        </div>
+        <div class="col-12 text-white text-center">
+          <p>
+            MoviesCode es tu destino definitivo para disfrutar del séptimo arte.
+            Explora una amplia variedad de películas, desde clásicos atemporales
+            hasta los últimos estrenos. Nuestra pasión es compartir historias a
+            través del cine, y estamos encantados de acompañarte en este
+            emocionante viaje cinematográfico. Descubre, disfruta y comparte la
+            magia del cine en MoviesCode.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="offcanvas offcanvas-start bg-black"
+      tabindex="-1"
+      id="offcanvasSearch"
+      aria-labelledby="offcanvasSearchLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSearchLabel">Búsqueda</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <form class="d-flex" role="search">
+            <input
+              id="search"
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar..."
+              aria-label="Buscar"
+            />
+            <button
+              class="btn btn-outline-info"
+              type="submit"
+              aria-label="Botón de Búsqueda"
+            >
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+        <div class="dropdown mt-3"></div>
+        <div class="d-flex mt-5">
+          <div id="list" class="text-white"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="../js/app.js" type="module"></script>
+  </body>
+</html>

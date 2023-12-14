@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Página de streaming de películas" />
+    <meta name="author" content="GitTeam2.0" />
+    <meta name="keywords" content="película, películas, streaming" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/image__1_-removebg-preview2.png"
+      type="image/png"
+    />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>MoviesCode</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="fixed-top">
+      <nav
+        class="navbar nav-underline bg-black navbar-expand-lg d-flex align-items-start"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <div class="mx-3">
+            <a class="navbar-footer-brand" href="../index.html">
+              <img
+                src="../assets/image__1_-removebg-preview.png"
+                alt="Logo de MoviesCode"
+              />
+            </a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+            <div id="navStartingPage" class="d-flex justify-content-center">
+              <ul class="row me-3 my-2 justify-content-end align-items-center">
+                <li
+                  class="d-flex col-5 justify-content-center nav-item mx-1 rounded-2 p-2 target"
+                >
+                  <a class="nav-link text-white text-target" href="#"
+                    >Loguearse</a
+                  >
+                </li>
+                <li
+                  class="d-flex col-5 justify-content-center nav-item mx-1 rounded-2 bg-white border border-light p-2 target-2"
+                >
+                  <a
+                    class="nav-link text-black text-target"
+                    href="./register.html"
+                    >Registrarse</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex">
+              <button
+                class="btn btn-outline-info offcanvas sticky-top"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasSearch"
+                aria-controls="offcanvasSearch"
+                aria-label="Botón de Búsqueda"
+              >
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="d-flex my-5 py-5 col container-fluid justify-content-center align-items-center"
+    >
+      <div class="container-fluid w-50 mt-5 py-3 bg-light rounded-2">
+        <form
+          class="registerForm needs-validation"
+          novalidate
+          onsubmit="logIn(event)"
+        >
+          <div class="mb-3">
+            <label for="emailLog" class="form-label text-black"
+              >Correo electrónico:</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="emailLog"
+              pattern=".{8,50}"
+              required
+              aria-describedby="emailLog"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="passwordLog" class="form-label text-black"
+              >Contraseña:</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="passwordLog"
+              pattern=".{8,30}"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary text-black">
+            Loguearse
+          </button>
+        </form>
+      </div>
+    </main>
+    <footer class="container-fluid bg-transparent">
+      <hr />
+      <div
+        class="row py-4 flex-column flex-md-row align-items-center gap-3 nav-footer-color"
+      >
+        <div class="col-12 logo-footer text-center navbar-footer-brand">
+          <img
+            src="../assets/image__1_-removebg-preview.png"
+            alt="Logo de MoviesCode"
+          />
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <a class="text-decoration-none mx-3 text-white" href="./contact.html"
+            >Contacto</a
+          >
+          <a class="text-decoration-none mx-3 text-white" href="./about.html"
+            >Acerca de</a
+          >
+        </div>
+        <div class="col-12 text-white text-center">
+          <small>&copy;MoviesCode 2023. Derechos reservados.</small>
+        </div>
+        <div
+          class="col-12 text-white text-center d-flex justify-content-center"
+        >
+          <a href="./error404.html" aria-label="Instagram"
+            ><i
+              class="fa fa-instagram fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+          <a href="./error404.html" aria-label="Youtube"
+            ><i
+              class="fa fa-youtube-play fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+          <a href="./error404.html" aria-label="Twitch"
+            ><i
+              class="fa fa-twitch fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+        </div>
+        <div class="col-12 text-white text-center">
+          <p>
+            MoviesCode es tu destino definitivo para disfrutar del séptimo arte.
+            Explora una amplia variedad de películas, desde clásicos atemporales
+            hasta los últimos estrenos. Nuestra pasión es compartir historias a
+            través del cine, y estamos encantados de acompañarte en este
+            emocionante viaje cinematográfico. Descubre, disfruta y comparte la
+            magia del cine en MoviesCode.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="offcanvas offcanvas-start bg-black"
+      tabindex="-1"
+      id="offcanvasSearch"
+      aria-labelledby="offcanvasSearchLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSearchLabel">Búsqueda</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <form class="d-flex" role="search">
+            <input
+              id="search"
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar..."
+              aria-label="Buscar"
+            />
+            <button
+              class="btn btn-outline-info"
+              type="submit"
+              aria-label="Botón de Búsqueda"
+            >
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+        <div class="dropdown mt-3"></div>
+        <div class="d-flex mt-5">
+          <div id="list" class="text-white"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="../js/register.js" type="module"></script>
+    <script src="../js/app.js" type="module"></script>
+  </body>
+</html>

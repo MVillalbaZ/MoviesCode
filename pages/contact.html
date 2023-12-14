@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Página de streaming de películas" />
+    <meta name="author" content="GitTeam2.0" />
+    <meta name="keywords" content="película, películas, streaming" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/image__1_-removebg-preview2.png"
+      type="image/png"
+    />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>MoviesCode</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="fixed-top">
+      <nav
+        class="navbar nav-underline bg-black navbar-expand-lg d-flex align-items-start"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <div class="mx-3">
+            <a class="navbar-footer-brand" href="../index.html">
+              <img
+                src="../assets/image__1_-removebg-preview.png"
+                alt="Logo de MoviesCode"
+              />
+            </a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"></li>
+            </ul>
+
+            <div id="navStartingPage" class="d-flex justify-content-center">
+              <ul
+                id="sectionStart"
+                class="row me-3 my-2 justify-content-end align-items-center"
+              >
+                <li
+                  class="d-flex col-5 justify-content-center nav-item mx-1 rounded-2 p-2 target"
+                >
+                  <a class="nav-link text-white text-target" href="./login.html"
+                    >Loguearse</a
+                  >
+                </li>
+                <li
+                  class="d-flex col-5 justify-content-center nav-item mx-1 rounded-2 bg-white border border-light p-2 target-2"
+                >
+                  <a
+                    class="nav-link text-black text-target"
+                    href="./register.html"
+                    >Registrarse</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex">
+              <button
+                class="btn btn-outline-info offcanvas sticky-top"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasSearch"
+                aria-controls="offcanvasSearch"
+                aria-label="Botón de Búsqueda"
+              >
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="d-flex my-5 py-5 col justify-content-center align-items-center"
+    >
+      <div>
+        <div>
+          <div>
+            <h1>Contáctanos</h1>
+            <p>Nos interesa saber tu opinión.</p>
+          </div>
+        </div>
+        <div class="card text-bg-dark border-0 my-3 d-none d-md-block">
+          <div class="img-bg">
+            <img
+              src="../assets/ab.jpg"
+              class="img-fluid"
+              alt="Paisaje de fondo"
+            />
+          </div>
+
+          <div class="card-img-overlay w-100 mt-3">
+            <form onsubmit="sendMessage(event)">
+              <h2 class="mb-3">
+                Dejanos tu comentario y nosotros nos contactaremos
+              </h2>
+              <div class="mb-3">
+                <label for="name-contact" class="form-label"
+                  >Nombre y apellido</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name-contact"
+                  name="name-contact"
+                  pattern=".{1,50}"
+                  placeholder="Juan Pérez"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="name-contact" class="form-label"
+                  >Correo electrónico</label
+                >
+                <input
+                  type="email-contact"
+                  class="form-control"
+                  id="email-contact"
+                  name="email-contact"
+                  pattern=".{8,50}"
+                  placeholder="nombre@ejemplo.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phone-contact" class="form-label"
+                  >Número de teléfono</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone-contact"
+                  name="phone-contact"
+                  pattern=".{3,50}"
+                  placeholder="+54-###-####-###"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="comment" class="form-label"
+                  >Déjanos tus comentarios...</label
+                >
+                <textarea
+                  itemid="textarea"
+                  class="form-control"
+                  id="comment"
+                  name="comment"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <div class="d-sm-grid d-lg-flex justify-content-end">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="card text-bg-dark border-0 my-3 d-block d-md-none">
+          <div class="card border-0 my-3">
+            <div class="d-none d-md-block">
+              <img
+                src="../assets/ab.jpg"
+                class="img-fluid"
+                alt="Paisaje de fondo"
+              />
+            </div>
+
+            <div class="w-100 mt-3">
+              <form>
+                <h2 class="mb-3 text-black text-lg-white">
+                  Dejanos tu comentario y nosotros nos contactaremos
+                </h2>
+                <div class="mb-3">
+                  <label
+                    for="name-contact-2"
+                    class="form-label text-black text-lg-white"
+                    >Nombre y apellido</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name-contact-2"
+                    name="name-contact-2"
+                    placeholder="Juan Perez"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label
+                    for="email-contact-2"
+                    class="form-label text-black text-lg-white"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email-contact-2"
+                    name="email-contact-2"
+                    placeholder="name@example.com"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label
+                    for="phone-contact-2"
+                    class="form-label text-black text-lg-white"
+                    >Número de teléfono</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone-contact-2"
+                    name="phone-contact-2"
+                    placeholder="381-1111111"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label
+                    for="comment-2"
+                    class="form-label text-black text-lg-white"
+                    >Déjanos tus comentarios...</label
+                  >
+                  <textarea
+                    itemid="textarea"
+                    class="form-control"
+                    id="comment-2"
+                    name="comment-2"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <div class="d-sm-grid d-lg-flex justify-content-end">
+                  <button class="btn btn-primary" type="submit">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="mapa">
+          <div class="card mb-3" style="max-width: 100%" ;>
+            <div class="row g-0">
+              <div class="col-md-5 order-sm-1 order-lg-first">
+                <div class="card-body">
+                  <h3 class="card-title text-black">Vení a visitarnos</h3>
+                  <p class="card-text text-black">
+                    Nuestras oficinas se encuentran en calle General Paz 576
+                  </p>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+              <div class="col-md-7 align-content-end order-sm-0 order-lg-last">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1205.3227327301688!2d-65.20800933031812!3d-26.836640934473348!
+                2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d3ad7f30f1d%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses-419
+                !2sar!4v1686745475471!5m2!1ses-419!2sar"
+                  width="100%"
+                  height="400"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Mapa de Respiro"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="container-fluid mt-5 bg-transparent">
+      <hr />
+      <div
+        class="row py-4 flex-column flex-md-row align-items-center gap-3 nav-footer-color"
+      >
+        <div class="col-12 logo-footer text-center navbar-footer-brand">
+          <img
+            src="../assets/image__1_-removebg-preview.png"
+            alt="Logo de MoviesCode"
+          />
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <a class="text-decoration-none mx-3 text-white" href="#">Contacto</a>
+          <a class="text-decoration-none mx-3 text-white" href="./about.html"
+            >Acerca de</a
+          >
+        </div>
+        <div class="col-12 text-white text-center">
+          <small>&copy;MoviesCode 2023. Derechos reservados.</small>
+        </div>
+        <div
+          class="col-12 text-white text-center d-flex justify-content-center"
+        >
+          <a href="./error404.html" aria-label="Instagram"
+            ><i
+              class="fa fa-instagram fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+          <a href="./error404.html" aria-label="Youtube"
+            ><i
+              class="fa fa-youtube-play fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+          <a href="./error404.html" aria-label="Twitch"
+            ><i
+              class="fa fa-twitch fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+        </div>
+        <div class="col-12 text-white text-center">
+          <p>
+            MoviesCode es tu destino definitivo para disfrutar del séptimo arte.
+            Explora una amplia variedad de películas, desde clásicos atemporales
+            hasta los últimos estrenos. Nuestra pasión es compartir historias a
+            través del cine, y estamos encantados de acompañarte en este
+            emocionante viaje cinematográfico. Descubre, disfruta y comparte la
+            magia del cine en MoviesCode.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="offcanvas offcanvas-start bg-black"
+      tabindex="-1"
+      id="offcanvasSearch"
+      aria-labelledby="offcanvasSearchLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSearchLabel">Búsqueda</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <form class="d-flex" role="search">
+            <input
+              id="search"
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar..."
+              aria-label="Buscar"
+            />
+            <button
+              class="btn btn-outline-info"
+              type="submit"
+              aria-label="Botón de Búsqueda"
+            >
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+        <div class="dropdown mt-3"></div>
+        <div class="d-flex mt-5">
+          <div id="list" class="text-white"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="../js/app.js" type="module"></script>
+    <script src="../js/contact.js"></script>
+  </body>
+</html>

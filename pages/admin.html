@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Página de streaming de películas" />
+    <meta name="author" content="GitTeam2.0" />
+    <meta name="keywords" content="película, películas, streaming" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/image__1_-removebg-preview2.png"
+      type="image/png"
+    />
+    <title>MoviesCode</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="fixed-top">
+      <nav
+        class="navbar nav-underline bg-black navbar-expand-lg d-flex align-items-start"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <div class="mx-3">
+            <a class="navbar-footer-brand" href="../index.html">
+              <img
+                src="../assets/image__1_-removebg-preview.png"
+                alt="Logo de MoviesCode"
+              />
+            </a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+            <div class="d-flex justify-content-center">
+              <ul class="row me-3 my-2 justify-content-end align-items-center">
+                <li
+                  class="d-flex col-5 justify-content-center nav-item mx-1 rounded-2 p-1 target-2"
+                >
+                  <button id="logOut" class="btn btn-outline-danger">
+                    Cerrar sesión
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="d-flex">
+              <button
+                class="btn btn-outline-info offcanvas sticky-top"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasSearch"
+                aria-controls="offcanvasSearch"
+                aria-label="Botón de Búsqueda"
+              >
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main" class="container-fluid mt-5 pt-5">
+      <div class="row">
+        <div>
+          <h1>Administración</h1>
+          <p>Bienvenido a la sección de administrador</p>
+        </div>
+
+        <button
+          id="buttonModal1"
+          class="btn btn-info mb-3"
+          type="button"
+          aria-label="Agregar película"
+        >
+          Agregar película
+        </button>
+
+        <div>
+          <h4>Tabla de películas</h4>
+          <div class="mb-3 overflow-x-scroll">
+            <table class="table">
+              <thead>
+                <tr class="text-center">
+                  <th>Código</th>
+                  <th>Nombre</th>
+                  <th>Categoría</th>
+                  <th>Descripción</th>
+                  <th>Publicado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody class="text-center"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="container-fluid bg-transparent">
+      <hr />
+      <div
+        class="row py-4 flex-column flex-md-row align-items-center gap-3 nav-footer-color"
+      >
+        <div class="col-12 logo-footer text-center navbar-footer-brand">
+          <img
+            src="../assets/image__1_-removebg-preview.png"
+            alt="Logo de MoviesCode"
+          />
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <a class="text-decoration-none mx-3 text-white" href="./contact.html"
+            >Contacto</a
+          >
+          <a class="text-decoration-none mx-3 text-white" href="./about.html"
+            >Acerca de</a
+          >
+        </div>
+        <div class="col-12 text-white text-center">
+          <small>&copy;MoviesCode 2023. Derechos reservados.</small>
+        </div>
+        <div
+          class="col-12 text-white text-center d-flex justify-content-center"
+        >
+          <a href="./error404.html" aria-label="Instagram"
+            ><i
+              class="fa fa-instagram fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+          <a href="./error404.html" aria-label="Youtube"
+            ><i
+              class="fa fa-youtube-play fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+          <a href="./error404.html" aria-label="Twitch"
+            ><i
+              class="fa fa-twitch fa-2x text-white mx-3"
+              aria-hidden="true"
+            ></i
+          ></a>
+        </div>
+        <div class="col-12 text-white text-center">
+          <p></p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="offcanvas offcanvas-start bg-black"
+      tabindex="-1"
+      id="offcanvasSearch"
+      aria-labelledby="offcanvasSearchLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSearchLabel">Búsqueda</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <form class="d-flex" role="search">
+            <input
+              id="search"
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar..."
+              aria-label="Buscar"
+            />
+            <button
+              class="btn btn-outline-info"
+              type="submit"
+              aria-label="Botón de Búsqueda"
+            >
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+        <div class="dropdown mt-3"></div>
+        <div class="d-flex mt-5">
+          <div id="list" class="text-white"></div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="addMovieModal"
+      tabindex="-1"
+      aria-labelledby="addMovieModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-black" id="addMovieModalLabel">
+              Agregar película
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="addMovieForm">
+              <div class="mb-3">
+                <label for="input1" class="form-label text-black">Código</label>
+                <input type="text" class="form-control" id="input1" />
+              </div>
+              <div class="mb-3">
+                <label for="input2" class="form-label text-black">Nombre</label>
+                <input type="text" class="form-control" id="input2" />
+              </div>
+              <div class="mb-3">
+                <label for="input3" class="form-label text-black"
+                  >Categoría</label
+                >
+                <input type="text" class="form-control" id="input3" />
+              </div>
+              <div class="mb-3">
+                <label for="input4" class="form-label text-black"
+                  >Descripción</label
+                >
+                <textarea class="form-control" id="input4" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="input5" class="form-label text-black"
+                  >Publicación</label
+                >
+                <input type="text" class="form-control" id="input5" />
+              </div>
+              <div class="mb-3">
+                <label for="input6" class="form-label text-black">Imagen</label>
+                <input type="text" class="form-control" id="input6" />
+              </div>
+              <div class="mb-3">
+                <label for="input7" class="form-label text-black">Video</label>
+                <input type="text" class="form-control" id="input7" />
+              </div>
+              <div class="mb-3 d-flex justify-content-end">
+                <button class="btn btn-warning">Agregar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="updateModal"
+      tabindex="-1"
+      aria-labelledby="updateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-black" id="updateModalLabel">
+              Actualizar registro
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="movieUpdate">
+              <div class="mb-3">
+                <label for="inputModal1" class="form-label text-black"
+                  >Código</label
+                >
+                <input type="text" class="form-control" id="inputModal1" />
+              </div>
+              <div class="mb-3">
+                <label for="inputModal2" class="form-label text-black"
+                  >Nombre</label
+                >
+                <input type="text" class="form-control" id="inputModal2" />
+              </div>
+              <div class="mb-3">
+                <label for="inputModal3" class="form-label text-black"
+                  >Categoría</label
+                >
+                <input type="text" class="form-control" id="inputModal3" />
+              </div>
+              <div class="mb-3">
+                <label for="inputModal4" class="form-label text-black"
+                  >Descripción</label
+                >
+                <textarea
+                  class="form-control"
+                  id="inputModal4"
+                  rows="3"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="inputModal5" class="form-label text-black"
+                  >Publicación</label
+                >
+                <input type="text" class="form-control" id="inputModal5" />
+              </div>
+              <div class="mb-3">
+                <label for="inputModal6" class="form-label text-black"
+                  >Imagen</label
+                >
+                <input type="text" class="form-control" id="inputModal6" />
+              </div>
+              <div class="mb-3">
+                <label for="inputModal7" class="form-label text-black"
+                  >Video</label
+                >
+                <input type="text" class="form-control" id="inputModal7" />
+              </div>
+              <div class="mb-3 d-flex justify-content-end">
+                <button class="btn btn-warning">Guardar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="offcanvas offcanvas-start bg-black"
+      tabindex="-1"
+      id="offcanvasSearch"
+      aria-labelledby="offcanvasSearchLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSearchLabel">Búsqueda</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <form class="d-flex" role="search">
+            <input
+              id="search"
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar..."
+              aria-label="Buscar"
+            />
+            <button
+              class="btn btn-outline-info"
+              type="submit"
+              aria-label="Botón de Búsqueda"
+            >
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+        <div class="dropdown mt-3"></div>
+        <div class="d-flex mt-5">
+          <div id="list" class="text-white"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="../js/admin.js" type="module"></script>
+    <script src="../js/app.js" type="module"></script>
+  </body>
+</html>
